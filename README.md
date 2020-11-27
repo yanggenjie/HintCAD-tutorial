@@ -28,7 +28,7 @@ typora-root-url: images
 
 如下图所示，依次进行。
 
-![image-20201126151256576](/image-20201126151256576.png)
+![image-20201126151256576](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126151256576.png)
 
 **这些步骤的先后顺序不能乱。**如果修改了其中某个环节，那么就要**从那个环节开始，往下走完流程。**
 
@@ -60,21 +60,21 @@ typora-root-url: images
 
 点击项目-新建项目
 
-![image-20201126155548654](/image-20201126155548654.png)
+![image-20201126155548654](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126155548654.png)
 
 然后弹出这个窗口，这里我们**只需要做一件事**，就是**设置项目文件路径及名称**，点击旁边的浏览，
 
-![image-20201126155651472](/image-20201126155651472.png)
+![image-20201126155651472](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126155651472.png)
 
 
 
 然后弹出下面这个窗口，命名或不命名都无所谓，重点是**你要找得到这个文件放在哪了**
 
-![image-20201126155916317](/image-20201126155916317.png)
+![image-20201126155916317](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126155916317.png)
 
 然后就又重新回到以下窗口，`项目文件路径及名称`和`新建或指定平面线文件`自动填写好了。
 
-![image-20201126160107727](/image-20201126160107727.png)
+![image-20201126160107727](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126160107727.png)
 
 这里还有一个设计者信息，到底要不要填。这里填也好，不填也无所谓，为什么？**因为这个信息是后面出图的时候才需要填写的**。这里相当于一个标签，如果你填写了，那么后面出图的时候，纬地会自动检索看看你这里写了什么信息，然后自动帮你填写上去，这个对整个过程的设计没有丝毫影响。
 
@@ -82,7 +82,7 @@ typora-root-url: images
 
 我这里就不写名字了，**直接点击确定**，然后就可以在地下的命令栏看到提示：
 
-![image-20201126161257486](/image-20201126161257486.png)
+![image-20201126161257486](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126161257486.png)
 
 
 
@@ -98,25 +98,25 @@ typora-root-url: images
 
 点击CAD左上角的图标，单击打开就可以了，或者快捷键`ctrl+O`
 
-![image-20201126161547655](/image-20201126161547655.png)
+![image-20201126161547655](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126161547655.png)
 
 然后弹出窗口：
 
-![image-20201126161737631](/image-20201126161737631.png)
+![image-20201126161737631](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126161737631.png)
 
 这时候，点击左边栏的`桌面`，然后就看到你电脑的磁盘了，你找到你地形图的位置就好，`我并不建议大家把所有东西都放到桌面上来，不过放也无所谓，个人喜好，记得备份到其它盘就好`
 
 找到地形图，选中，点击打开之后，可能会弹出类似以下的窗口：
 
-![image-20201126162146414](/image-20201126162146414.png)
+![image-20201126162146414](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126162146414.png)
 
 这说明：你的电脑没有这个叫做`AAA`的字体文件，点击`取消`，然后弹出以下窗口：
 
-![image-20201126162257490](/image-20201126162257490.png)
+![image-20201126162257490](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126162257490.png)
 
 **这个意思就是说，叫你用其它字体来`替代`AAA这个字体，一般选国标字体来替换，国标字体：`gbcbig.shx`选中，点击确定。**然后稍微等一下就可以加载出来了。
 
-![image-20201126162521006](/image-20201126162521006.png)
+![image-20201126162521006](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126162521006.png)
 
 我们可以看到这个命令栏上的提示：已经用国标字体替换了AAA字体。
 
@@ -134,7 +134,7 @@ typora-root-url: images
 
 * **点击设计，主线平面设计**
 
-![image-20201126165238425](/image-20201126165238425.png)
+![image-20201126165238425](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126165238425.png)
 
 `然后弹出主线平面设计的窗口。`
 
@@ -142,7 +142,7 @@ typora-root-url: images
 
 `我们先说怎么在软件上操作，然后再说需要考虑什么。`
 
-![image-20201126165452089](/image-20201126165452089.png)
+![image-20201126165452089](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126165452089.png)
 
 * 点击拾取，然后`鼠标移动`到你想作为起点的地方，`单击鼠标左键`就可以完成起点的选取。
 
@@ -150,15 +150,15 @@ typora-root-url: images
 
 `你可以看看上图，我们未拾取的时候，坐标都是（0,0），选取之后，纬地自动读取。`
 
-![image-20201126165812905](/image-20201126165812905.png)
+![image-20201126165812905](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126165812905.png)
 
 然后，点击`插入`：
 
-![image-20201126170111377](/image-20201126170111377.png)
+![image-20201126170111377](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126170111377.png)
 
 弹出，是否插入`交点1`，点击`是`：
 
-![image-20201126170138855](/image-20201126170138855.png)
+![image-20201126170138855](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126170138855.png)
 
 `这时候，我们就回到了地形图上，不过鼠标在拉动一条线，即可以选线了。如下图，我随便选了一条。`
 
@@ -166,11 +166,11 @@ typora-root-url: images
 
 最终，你选完了，就需要按键盘上的`回车键`（即Enter键），不然它是永远不会自动结束的。
 
-![image-20201126170317388](/image-20201126170317388.png)
+![image-20201126170317388](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126170317388.png)
 
 当我按下`回车键`之后，就**自动重新弹回主线平面设计**的窗口(如果没有自动弹出，或者你关闭了，那么重新点击`设计`-`主线平面设计`，即可)：
 
-![image-20201126170657839](/image-20201126170657839.png)
+![image-20201126170657839](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126170657839.png)
 
 如上图，可以按`向左`或者`向右`的箭头，查看这条路线的交点，也就是转弯的地方的点。
 
@@ -178,7 +178,7 @@ typora-root-url: images
 
 那么如何设计`园曲线`，`缓和曲线`呢？这就需要在这个`交点`（也就是转折点）的地方做文章，由图中，我们可以看到，
 
-![image-20201126172139438](/image-20201126172139438.png)
+![image-20201126172139438](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126172139438.png)
 
 这个窗口大概可以分成这样三部分：**交点数据**的区域、**园曲线及缓和曲线设计**的区域、**总数据显示**的区域；
 
@@ -198,7 +198,7 @@ typora-root-url: images
 
 后缓和曲线(S2)：75
 
-![image-20201126173929540](/image-20201126173929540.png)
+![image-20201126173929540](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126173929540.png)
 
 >  这里先讲一个小原则，当然后面也会详细讲到
 >
@@ -208,17 +208,17 @@ typora-root-url: images
 
 至此，平面设计的步骤就已经做完了，我们需要**保存刚才的路线文件**。
 
-![image-20201126174517459](/image-20201126174517459.png)
+![image-20201126174517459](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126174517459.png)
 
 `点击`另存`或者`存盘`都可以，因为是第一次保存，无论点击哪一个，都会问你保存到哪。`
 
 我们点击`存盘`。
 
-![image-20201126174817880](/image-20201126174817880.png)
+![image-20201126174817880](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126174817880.png)
 
 弹出窗口，点击保存即可,然后弹出窗口：
 
-![image-20201126174917288](/image-20201126174917288.png)
+![image-20201126174917288](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126174917288.png)
 
 `是否将“平面交点数据”自动转化为当前项目的“平曲线数据”？`
 
@@ -226,7 +226,7 @@ typora-root-url: images
 
 不放心还可以再点击一次保存......
 
-![image-20201126175038149](/image-20201126175038149.png)
+![image-20201126175038149](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126175038149.png)
 
 
 
@@ -240,19 +240,19 @@ typora-root-url: images
 
 点击`项目`-`项目管理器`
 
-![image-20201126184524421](/image-20201126184524421.png)
+![image-20201126184524421](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126184524421.png)
 
 然后弹出一下窗口：
 
-![image-20201126184621547](/image-20201126184621547.png)
+![image-20201126184621547](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126184621547.png)
 
 可以看到平面交点文件，自动导入进来了，如果你不保存项目，那么下一次你就需要自己手动导入。我们可以选中平面交点文件那一行，然后旁边出现3个点，点击它。
 
-![image-20201126185435410](/image-20201126185435410.png)
+![image-20201126185435410](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126185435410.png)
 
 然后就弹出一下窗口：
 
-![image-20201126185542733](/image-20201126185542733.png)
+![image-20201126185542733](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126185542733.png)
 
 这个就是导入`.JD`文件时候弹出的窗口，点击保存，其实就是导入。
 
@@ -266,11 +266,11 @@ typora-root-url: images
 
 第三个是`.pm`文件；这个是什么东西？
 
-![image-20201126185738503](/image-20201126185738503.png)
+![image-20201126185738503](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126185738503.png)
 
 还记得刚才存盘操作吗？存盘之后弹出了一个窗口
 
-![image-20201126190128419](/image-20201126190128419.png)
+![image-20201126190128419](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126190128419.png)
 
 注意看后缀：`.pm`，这时候我们知道了，这个文件就是交点文件附带的一个东西，
 
@@ -320,7 +320,7 @@ typora-root-url: images
 
 **对直线的要求：**
 
-![image-20201126212652239](/image-20201126212652239.png)
+![image-20201126212652239](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126212652239.png)
 
 > 首先，第一条，这条路直线部分长度不宜过长，因为直线太长了，在这条路上开车就会容易打瞌睡，容易翻车。
 >
@@ -328,7 +328,7 @@ typora-root-url: images
 
 **对园曲线的要求：**
 
-![image-20201126212724865](/image-20201126212724865.png)
+![image-20201126212724865](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126212724865.png)
 
 > 园曲线部分，也就是转弯的地方啦。
 >
@@ -344,13 +344,13 @@ typora-root-url: images
 
 **然后是缓和曲线的要求：**
 
-![image-20201126215616265](/image-20201126215616265.png)
+![image-20201126215616265](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126215616265.png)
 
-![image-20201126215703258](/image-20201126215703258.png)
+![image-20201126215703258](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126215703258.png)
 
-![image-20201126215722057](/image-20201126215722057.png)
+![image-20201126215722057](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126215722057.png)
 
-![image-20201126215730866](/image-20201126215730866.png)
+![image-20201126215730866](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126215730866.png)
 
 > 因为公路平面缓和曲线采用的是回旋线，所以规范这里写的就是回旋线。
 >
@@ -388,15 +388,15 @@ typora-root-url: images
 
 既然那么怕拆房子，那我们先认识一下房子吧：
 
-![image-20201126201733930](/image-20201126201733930.png)
+![image-20201126201733930](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126201733930.png)
 
 像这样用**矩形**来表示，然后中间写着砖、混之类的，就是房子了，砖就是用砖做的房子，砖2，数字就一个编号，你知道这个是房子就行。这个可能不太清楚，再看一张：
 
-![image-20201126202042874](/image-20201126202042874.png)
+![image-20201126202042874](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126202042874.png)
 
 看到那些**矩形**没？里面可能没写子，不过不影响它是房子，这么多矩形就说明这里有很多房子，也就是一个村落或者镇了。
 
-![居民房屋](/居民房屋.JPEG)
+![居民房屋](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/居民房屋.JPEG)
 
 这里有个总图，不过清晰度不是太高，不过勉强可以看到，就是各种房子。
 
@@ -404,27 +404,27 @@ typora-root-url: images
 
 第二个就是比较多的农田、庄稼了
 
-![image-20201126202625183](/image-20201126202625183.png)
+![image-20201126202625183](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126202625183.png)
 
 看到这个向下的箭头没。这个就是稻田。还有就是像下面这种：
 
-![image-20201126202735748](/image-20201126202735748.png)
+![image-20201126202735748](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126202735748.png)
 
 这个也是农田，不过是干旱的了，简称旱田。这种地方，如果当地是以此为生，那么修路的时候，最好就别穿过这里了，如果都出去打工了，那么人家巴不得你来占地，双手奉上。我就总图例奉上：
 
-![植被园林](/植被园林.JPEG)
+![植被园林](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/植被园林.JPEG)
 
 * 道路
 
 还有道路
 
-![image-20201126203215111](/image-20201126203215111.png)
+![image-20201126203215111](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126203215111.png)
 
 仔细看，还是很容易辨别的，它和等高线虽然有点像，不过却是独木成林，和等高线之间还是有一些**有角度的相交**，两条线就是道路两边的边界。而且**等高线是一条闭合的曲线**，虽然有些没有闭合，那是因为地形图被裁剪了，所以你看到是不闭合的。
 
 公路相关的图例：
 
-![公路相关](/公路相关.JPEG)
+![公路相关](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/公路相关.JPEG)
 
 
 
@@ -432,7 +432,7 @@ typora-root-url: images
 
 河流的话;
 
-![image-20201126204015403](/image-20201126204015403.png)
+![image-20201126204015403](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126204015403.png)
 
 和道路的差不多，也是用两条把两岸的边界标出来，不过河流还在中间用箭头把水流的方向标出来。
 
@@ -440,7 +440,7 @@ typora-root-url: images
 
 如果你实在不知道你的地形图上标的是什么东西，可能是制作地形图的人使用了它自己的方式标记出来，还没来得及修正。不过一般都会写在图层上面的。比如说下面这个：
 
-![image-20201126204406437](/image-20201126204406437.png)
+![image-20201126204406437](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201126204406437.png)
 
 点击这条青色的线，标的居然是水系，可能是一条小溪，不配拥有正规图例吧。不过呢在图层的名字上已经写出来了，这个时候呢，这条小溪也只能忍着，吃了哑巴亏了。
 
@@ -460,11 +460,11 @@ typora-root-url: images
 
 首先，点击项目-打开项目：
 
-![image-20201127172325303](/image-20201127172325303.png)
+![image-20201127172325303](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201127172325303.png)
 
 然后找到项目文件所在的位置，选中，打开：
 
-![image-20201127172426205](/image-20201127172426205.png)
+![image-20201127172426205](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201127172426205.png)
 
 
 
@@ -476,11 +476,11 @@ typora-root-url: images
 
 然后现在开始做设计向导，点击项目-设计向导：
 
-![image-20201127184433866](/image-20201127184433866.png)
+![image-20201127184433866](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201127184433866.png)
 
 弹出这个向导的窗口：
 
-![image-20201127184505883](/image-20201127184505883.png)
+![image-20201127184505883](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201127184505883.png)
 
 
 
@@ -490,13 +490,13 @@ typora-root-url: images
 
 如果一直重复出现致命错误，大概率就是因为缺失了某些文件。
 
-![image-20201127184712235](/image-20201127184712235.png)
+![image-20201127184712235](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201127184712235.png)
 
 
 
 点击下一步：
 
-![image-20201127185024171](/image-20201127185024171.png)
+![image-20201127185024171](https://gitee.com/yanggenjie/HintCAD-tutorial/tree/master/images/image-20201127185024171.png)
 
 这里需要选择你自己设计的公路等级和设计车速，
 
