@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [['$','$'], ['\\(','\\)']]}});</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": {"availableFonts":["TeX"],"scale": 150}});</script>
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="4%E8%AE%BE%E8%AE%A1%E5%90%91%E5%AF%BC">4.设计向导</h1>
+<h2 id="41%E7%BA%AC%E5%9C%B0%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4">4.1纬地操作步骤</h2>
+<h3 id="%E8%A1%94%E6%8E%A5%E4%B8%8A%E4%B8%80%E6%AD%A5%E6%93%8D%E4%BD%9C">衔接上一步操作</h3>
+<p>接上一章的纬地操作，我假设你是一路看着过来的，也就是说，中间你可能关闭过电脑，那么现在重启打开电脑，我们要如何继续上一次的工作呢？</p>
+<p>首先，点击项目-打开项目：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127172325303.png" alt="image-20201127172325303"></p>
+<p>然后找到项目文件所在的位置，选中，打开：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127172426205.png" alt="image-20201127172426205"></p>
+<p>打开之后就已经接着上一次的工作了。</p>
+<p>但现在CAD窗口还是空空如也，什么都没有，地形图也没有打开。不过我们已经不需要打开地形图了，只有做平面选线的时候才需要打开地形图，或者是你自己想熟悉一下地形图，你可以打开。现在做设计向导，就无需打开。</p>
+<h3 id="%E8%B7%AF%E7%BA%BF%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE">路线参数设置</h3>
+<p>然后现在开始做设计向导，设计向导这部分主要就是填入数据，所以这部分内容主要就是查询规范，下面的内容展示查询规范的过程。</p>
+<p>点击项目-设计向导：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127184433866.png" alt="image-20201127184433866"></p>
+<p>弹出这个向导的窗口：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127184505883.png" alt="image-20201127184505883"></p>
+<p>然后接下来就是填数据了，第一步这里，其实没有什么需要填写的，就是看你设计的是什么类型的路线，你是设计公路还是城市道路，这个需要你自己选择了，我们这里就选择公路。其它就不需要填写了。</p>
+<p>这里可以注意到一个文件，.pm文件，这个文件是之前生成的，所以如果你没有这个文件，那么设计向导就会出现致命错误。</p>
+<p>如果一直重复出现致命错误，大概率就是因为缺失了某些文件。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127184712235.png" alt="image-20201127184712235"></p>
+<h3 id="%E9%A1%B9%E7%9B%AE%E5%88%86%E6%AE%B5%E8%AE%BE%E7%BD%AE">项目分段设置</h3>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127185024171.png" alt="image-20201127185024171"></p>
+<p>这里需要选择你自己设计的公路等级和设计车速。</p>
+<h3 id="%E8%B7%AF%E5%B9%85%E5%8F%8A%E6%96%AD%E9%9D%A2%E5%BD%A2%E5%BC%8F%E8%AE%BE%E7%BD%AE">路幅及断面形式设置</h3>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127195431653.png" alt="image-20201127195431653"></p>
+<p>这里注意看标题，就是你设计的横断面的形式了，这些数据是需要你自己设计，然后填入的。<strong>怎么设计，就需要查规范了</strong>：</p>
+<p>我们翻开《公路路线设计规范》JTG D20-2017，第六章，公路横断面，第六章前面是对横断面的一些说明，大家没事的时候，多翻翻，可以更加深对横断面设计的理解。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127200127468.png" alt="image-20201127200127468"></p>
+<p>这里我们设计的是二级公路，那么就找与二级公路相关的说明：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127200359739.png" alt="image-20201127200359739"></p>
+<p>从这里（得把我圈起来的文字看或者读一遍，你才知道我是怎么确定的，我默认你已经看了上图勾出来的，下面的情况类似），可确定我们应该<strong>使用整体式路基断面</strong>。我们继续往下看：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127200515738.png" alt="image-20201127200515738"></p>
+<p>这里就需要<code>车流量</code>的数据了，这个是需要去调查得到的，规范上是翻不到的。我们<strong>演示就不需要加宽路肩</strong>了。继续往下翻规范：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127200746010.png" alt="image-20201127200746010"></p>
+<p>从这里可以判断，我们的<strong>车道宽度得3.5m</strong>。继续往下看：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127200905452.png" alt="image-20201127200905452"></p>
+<p>从这里知道，我们要<strong>设计两条车道</strong>。</p>
+<p>到现在我们确定了哪些东西？</p>
+<ul>
+<li>整体式路基</li>
+<li>两条车道，每条3.5m宽</li>
+</ul>
+<p>然后，现在回到纬地上看看：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127201503067.png" alt="image-20201127201503067"></p>
+<p>好吧，只能选一个2车道，还是默认选的。<strong>这是因为纬地其实是自动绑定了规范的</strong>，当你第一步选择<strong>公路主线</strong>，第二步选择<strong>公路等级</strong>（我们选二级公路）、设计车速（我们选择了60 km/h），然后<strong>纬地就自动查找规范</strong>，<strong>自动帮你填好后面的数据</strong>了。</p>
+<p>回想一下我们是怎么设计出来<strong>整体式路基、两车道、3.5m</strong>的？</p>
+<p>根据公路等级确定了整体式路基和车道数量，根据设计车速确定了车道宽度。</p>
+<p>我们接着往下看规范：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127203459189.png" alt="image-20201127203459189"></p>
+<p>到了如何确定中间带了，我们是60km/h的设计车速，不过我们是二级公路，没有要求必须要设置中间带，那么现在中间带就是0m了，也就是不设置，因为没钱，你开车的自己好自为之。</p>
+<p><code>这里就是个人的选择了，毕竟没钱，到时候在路上多贴上限速的标牌，多设置几个摄像头，不会相撞就好。</code></p>
+<p>想必看到这里，大家已经不用再继续看我废话了，知道横断面设计的车道宽度、车道数量、路肩、中间带、路供坡度等等这些部分的参数怎么设计的了吧？多翻翻规范就知道了。</p>
+<p>好我们再看一个路肩，往下翻规范：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127205751287.png" alt="image-20201127205751287"></p>
+<p>路肩可以宽一点，都取一般值，土路肩+硬路肩=0.75+0.75=1.5m，这个只是右侧的，左侧也是1.5m。</p>
+<p>好了，现在我们已经把横断面的大概形式已经设计出来了：</p>
+<p>0.75(左侧土路肩)+0.75(左侧硬路肩)+3.5(左侧行车道)+3.5(右侧行车道)+0.75（右侧硬路肩）+0.75（右侧土路肩）=10m。</p>
+<p>所以呢，分别选中下图中的这些数据，依次填入，然后路幅宽度就会自动计算出来了。或者你可以选预设的路幅宽度，纬地会自动按预设的分配给每个部分。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127210705146.png" alt="image-20201127210705146"></p>
+<p>这里还需要填个横坡，也是一样，查规范：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127211219416.png" alt="image-20201127211219416"></p>
+<p>这里有路供横坡和路肩横坡的区分，大家不知道可以自行研究一下......</p>
+<p>路供就是把路面做成倾斜一点，利于排水，免得下雨的时候积水太多，影响车行。</p>
+<p>由于二级公路规定是双向横坡，也就是两条车道都要倾斜，但是我们又没有中间带，那么就只能中间高，往路的两边倾斜，这样就可以让水排出去。所以这种中间高两边低的横坡，也叫人字坡。如果有中间带，可以在中间带下面设置水管什么的，水往中间带流的时候，可以流到水管里面，然后进过水管，排除路外。</p>
+<p>总之呢，路供就是为了排水用的。</p>
+<p>其它的其实我觉得没有什么说的了，我这里就是给大家展示一下这些数据是怎么找出来的，怎么设计出来，就是查规范，然后结合实际情况。说到结合实际情况这几个字，有同学就头疼，“哎呀，我什么都会，就是不会结合实际情况......”，那你就按规范的数值填，也是造价多几个0或者少几个0的问题而已。</p>
+<p><strong>小结</strong></p>
+<p>读到这里，大家再回过头来看看《公路路线设计规范》JTG D20-2017，第六章公路横断面的目录。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127212145554.png" alt="image-20201127212145554"></p>
+<p>你看，目录上都写得清清楚楚，车道怎么设计出来的，中间带要不要设置，路肩要不要设置，宽度应该是多少才合理，路供横坡应该是多少。</p>
+<h3 id="%E5%A1%AB%E6%96%B9%E8%BE%B9%E5%9D%A1%E8%AE%BE%E7%BD%AE">填方边坡设置</h3>
+<ul>
+<li><strong>补充知识</strong></li>
+</ul>
+<p>讲填方边坡之前，先熟悉熟悉路基结构图：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130112613821.png" alt="image-20201130112613821"></p>
+<p><code>图片来自《路基设计手册》第二版</code></p>
+<p>上图是路基每个部分的专业名词即对应部位。大家知道这些专业名词的具体部位，看规范也会理解深刻一点。</p>
+<p><code>下面继续纬地的操作</code></p>
+<p>下一步，填方边坡：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127195815723.png" alt="image-20201127195815723"></p>
+<p>这里的数据应该去哪里找？</p>
+<p>那就需要用到另一本规范了：《公路路基设计规范》JTG D30-2015</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201128134856397.png" alt="image-20201128134856397"></p>
+<blockquote>
+<p>上个版本是《公路路基设计规范》JTG D30-2004，已经弃用，规范还是要看最新版的。</p>
+</blockquote>
+<p>现在来翻翻这本书的第三章——一般路基</p>
+<p><strong><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201128135119718.png" alt="image-20201128135119718"></strong></p>
+<p>对了，如果不知道规范中说的路堤和路堑是什么（这一点当然不会不知道，就是怕有时候忘记了弄混淆了，所以规范的前面就给你说明了路堤路堑的概念。）</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201128135710665.png" alt="image-20201128135710665"></p>
+<ul>
+<li><strong>坡率P</strong></li>
+</ul>
+<p>好了，现在我们需要填写填方边坡的数据，就翻到填方边坡：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201128140127548.png" alt="image-20201128140127548"></p>
+<p>这里给出的上部高度，就是纬地上的H1，下部高度就是H2。比值就是坡率比，注意看P1的括号里面是（1:X）然后我们填入的值就是X的值。</p>
+<p><code>我这里点击了下图中右侧的数据部分，所以图上显示的是右侧的边坡，如果你点击左侧的数据，那么就是左边坡。（这里左侧、右侧不是方向，注意看下图中窗口上显示的文字。）</code></p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201128140608226.png" alt="image-20201128140608226"></p>
+<p>由《公路路基设计规范》表3.3.5我们可以知道，这里的坡度P1应该是1:1.5，P2应该是1:1.75。（这里左右两侧当然是设置一样的数值，纬地会根据实际地形，计算的，这里是输入一个限制区间）</p>
+<blockquote>
+<p>如果你没有选二级台阶，是不会有P2的，这里的边坡形式一般都取二级台阶。<strong>选二级台阶的意思不是要求全线都是二级台阶，而是如果高度超过你设置的值，那么就自动变成二级台阶，否则就用一个台阶</strong>。</p>
+<p>而如果你选择一级台阶，那么全线不管填方多高，都是一个坡，没有台阶。二级台阶就像下面这种，中间有个台阶，那个宽度，人可以走过去。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201128141929615.png" alt="image-20201128141929615"></p>
+</blockquote>
+<ul>
+<li><strong>高度H1</strong></li>
+</ul>
+<p>坡率已经填好，接下来到高度H1、H2，H1也就是上部高度最高的范围，意思就是，如果你填土是在6m以下，那么就只有一个坡就好，不用设置台阶，如果超过了6m，那么纬地就会开始设置一个台阶了。</p>
+<blockquote>
+<p>有同学可能会问，规范的表格上不是写着H小于等于8m吗？你为什么要设置成6m？</p>
+<p>这是需要做边坡稳定性计算了，意思就是，我其实也不知道要设置多少才好，只知道8m以内可以不用做台阶，可是这是地质条件良好的情况下的，如果地质不好，那么你填土不到8m，这个坡就垮了，所以在这种地质下，很可能最高就只能到5m,6m，如果要继续填土，那么就需要设置一个台阶，来缓冲一下。</p>
+<p>那么如何做边坡稳定性计算，那又是另一本书的故事了。可以去看《公路路基设计手册》</p>
+</blockquote>
+<p>所以规范是规范，是理论情况，需要根据实际情况来设计，这里，每个人的设计水平就开始有所区分了，如果你依然是不管不顾，就用规范上的最大值，那么你这个设计就会出问题，如果只是学校里面的作业，那也就罢了，毕竟没有实施下来，如果是实际工程，你随便这样设计，那么就会出大问题。</p>
+<p>所以，设计也没有想想中那么简单，我们使用软件倒是很容易。</p>
+<ul>
+<li><strong>W1</strong></li>
+</ul>
+<p>还有一个就是W1,W2的宽度，是什么？</p>
+<p>W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台一来可以增加边坡的稳定性，还可以便于施工。</p>
+<p>然后，在坡脚的地方就是护坡道了。这两个的取值一般在1-2m。</p>
+<p>如果填方或者挖方太高，最低要求是2m。填高超过20m，就需要做边坡稳定性验算，然后设计挡墙、护坡脚等之类的防护设置。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130112933766.png" alt="image-20201130112933766"></p>
+<h3 id="%E6%8C%96%E6%96%B9%E8%BE%B9%E5%9D%A1%E8%AE%BE%E7%BD%AE">挖方边坡设置</h3>
+<p>接下来是挖方边坡：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201128142726423.png" alt="image-20201128142726423"></p>
+<p>挖方边坡的设置和填方的类似。不过，因为是挖的，是土质还是岩质，是看当地的地质情况，土质的坡率可以稍微大一点，岩质坡率要缓一点。</p>
+<p>如果你做的是课程设计之类的，没有地质相关的资料，那么就默认选土质的吧，或者你也可以使用搜索引擎搜索看看那个地方的地质情况。这里坡率就选1:1.5。高度就按纬地默认的高度，如果你要修改那么H1可以写成8m，H2是12m。8m+12m=20m已经是深路堑了。</p>
+<blockquote>
+<p>这里为什么又可以按规范上的，而不是改成6m，这<strong>就是体现自己设计的思考了</strong>，不然老按规范，那么这个设计向导做到第二步，就直接一直点下一步，看都不用看了，还查什么规范。人家就是按规范建议填入的，那随便找一个会操作软件的人，都可以设计公路了。</p>
+</blockquote>
+<p>然后接下来是碎落台和边坡平台，碎落台是防止有碎石之类的掉进边沟，影响排水，所以呢需要设置1-2m宽的碎落台，一般设置1m就差不多了。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130121504713.png" alt="image-20201130121504713"></p>
+<h3 id="%E8%BE%B9%E6%B2%9F%E5%92%8C%E6%8E%92%E6%B0%B4%E6%B2%9F%E8%AE%BE%E7%BD%AE">边沟和排水沟设置</h3>
+<p>关于边沟，二级公路排水量相对少，所以一般都是设置矩形边沟，然后是40x40cm的，如果是一级公路以上或者是该地降雨量较多，排水需求大的，才是60x60的矩形边沟，或者梯形。干旱的地方就30x30cm。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130125044477.png" alt="image-20201130125044477"></p>
+<p>排水沟也一样，如果你设置梯形的：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130151820681.png" alt="image-20201130151820681"></p>
+<p>内侧边坡(靠近道路一侧，如图上的P2)一般为1:1~1:1.5之间，外侧边坡(靠近山体一侧，如上图的P1)通常和挖方边坡的坡率一致。</p>
+<h3 id="%E6%9B%B2%E7%BA%BF%E8%B6%85%E9%AB%98%E8%AE%BE%E7%BD%AE">曲线超高设置</h3>
+<p>点击下一步，到超高加宽设置：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130152141502.png" alt="image-20201130152141502"></p>
+<p>先看最大超高值的设置：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130152341110.png" alt="image-20201130152341110"></p>
+<p>我们重新翻开《公路路线设计规范》：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130152612277.png" alt="image-20201130152612277"></p>
+<p>之前我们设置园曲线半径的时候，说如果园曲线半径大于一定值的时候，可以不设置超高，如果不记得可以往回翻一下平面选线那一章。</p>
+<p>我们首先判断自己要不要设置超高，如果设置，那么就按上图中的综合来选，比如说一般地区的二级公路，最大超高是8%，然后加上车速限制，比如60km/h，那么最大超高值就只能是4%。综合起来就只能选4%。</p>
+<ul>
+<li>旋转方式</li>
+</ul>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130153739933.png" alt="image-20201130153739933"></p>
+<p>这一点，还是继续往下翻规范：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130153708093.png" alt="image-20201130153708093"></p>
+<p>首先我们要看懂这个内侧和外侧是什么意思，恩，怎么说呢，超高我想大家都知道是什么意思，就是把路的一边抬高，以防车受离心力的影响飞出去，抬高的那一侧就是外侧，低的那一侧是内侧。</p>
+<p>然后纬地的用词和规范的用词有点出入，规范是：</p>
+<blockquote>
+<p>绕内侧车道边缘旋转、绕路中线旋转、绕外侧车道边缘旋转。</p>
+</blockquote>
+<p>纬地上是：</p>
+<blockquote>
+<p>绕行车道中心旋转、绕曲线内侧路基边缘旋转、绕曲线内侧行车道边缘旋转。</p>
+</blockquote>
+<p>这里先给结论，然后下面给出我的解释：</p>
+<p>绕<strong>内侧车道边缘</strong>旋转=绕曲线<strong>内侧行车道边缘</strong>旋转。</p>
+<p>绕路<strong>中线</strong>旋转=绕行<strong>车道中心</strong>旋转；</p>
+<p>绕曲线内侧<strong>路基边缘</strong>旋转=绕<strong>外侧车道边缘</strong>旋转。</p>
+<p>前面两条可能比较好理解，就是最后一条有点争议，大家可以看看我下面的论证过程。</p>
+<hr>
+<ul>
+<li><strong>论证过程</strong></li>
+</ul>
+<p>我们按<strong>规范所写的名词</strong>为标准来理解这三种旋转方式：</p>
+<p>先理解第一个：<code>绕内侧车道边缘旋转</code>，看图理解：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130162847221.png" alt="image-20201130162847221"></p>
+<p>也就是说，<strong>最终是绕内侧车道边缘</strong>旋转。</p>
+<p>然后第二个<code>绕路中线旋转</code>：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130163717823.png" alt="image-20201130163717823"></p>
+<p>前面两步一样的，只是这种方式最后是绕行车道中心旋转的，所以</p>
+<p>这种超高方式就叫绕中线旋转。</p>
+<p>第三个方式绕外边线旋转，这个比前面这两个稍难理解点：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130165111170.png" alt="image-20201130165111170"></p>
+<p>第二步，右侧的行车道绕<strong>最右侧的边缘</strong>旋转，是降低的旋转，因为最终要做成外侧高，内侧低。而路基是整体式路基，所以呢，左侧的就自然跟着右侧的走。</p>
+<p>然后现在来看看这个纬地上的名词，</p>
+<p>先看纬地上的第一个：绕曲线内侧<strong>路基边缘</strong>旋转方式</p>
+<p>这个我有点懵了，我们翻开纬地的帮助文档看看，这里纬地说的<code>绕曲线内侧路基边缘旋转</code>，这个旋转轴是在<strong>路基边缘</strong>。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130160300217.png" alt="image-20201130160300217"></p>
+<p>我们看到这个最终的旋转轴是在<strong>内侧路基边缘</strong>旋转的，不过规范上说如果路基外缘高程受限制时，可以采用绕外侧行车道边缘的旋转方式，所以按我的理解，<code>绕内侧路基边缘</code>这种方式是<code>绕外侧行车道边缘</code>的理想情况，两者可以替代。前者更优，当然这里可替代是我个人的看法，如果有误，各位读者请多多指正一下。</p>
+<p>接着第二个：<strong>绕曲线内侧行车道边缘旋转方式</strong></p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130170655933.png" alt="image-20201130170655933"></p>
+<p>这个应该不用多解释了，如果你看了之前我对规范上三个旋转方式的解释，分清路什么是内侧，什么是外侧，就很容易看出来，这个就是<strong>绕内边线旋转</strong>的方式。</p>
+<p>然后最后一个：<strong>绕行车道中心旋转方式</strong>，这里也贴上纬地帮助文件的图：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130170914353.png" alt="image-20201130170914353"></p>
+<p>这种旋转方式容易理解，反正就是绕着中心转嘛，这里有一点需要注意，就是<code>绕中央分隔带边缘</code>旋转方式，在纬地上可以选<code>绕行车道中心旋转方式</code> 这种方式。</p>
+<ul>
+<li>渐变方式</li>
+</ul>
+<p>7.5.7给出，超高过渡一般采用线性过渡方式。</p>
+<ul>
+<li>土路肩超高方式</li>
+</ul>
+<p>土路肩一般选择不超高，而硬路肩超高一般和行车道一致。</p>
+<h3 id="%E6%9B%B2%E7%BA%BF%E5%8A%A0%E5%AE%BD%E8%AE%BE%E7%BD%AE">曲线加宽设置</h3>
+<p>园曲线的加宽应该根据公路的交通组成确定。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130172731444.png" alt="image-20201130172731444"></p>
+<p>我们继续查看规范：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130172235365.png" alt="image-20201130172235365"></p>
+<p>首先要判断你设计的公路需不需要加宽，二级、三级公路、四级公路且园曲线半径小于或等于250m的时候，才需要设置加宽，如果你是高速公路、一级公路什么的，就不需要设置加宽路，因为你全程都很宽。</p>
+<p>这里我设计的例子是二级公路，无论是作为干线还是集散，都是3类加宽。其它的可以查看一下规范，以及《道路勘测设计》第四版（或者更新的版本）查。</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130172657488.png" alt="image-20201130172657488"></p>
+<p>来自《道路勘测设计》第四版截图</p>
+<p>然后是加宽位置，不管你是哪种，都只能选曲线内侧加宽。(在纬地上)</p>
+<p>加宽过渡有线性加宽和高次抛物线加宽。二、三、四级公路一般选线性加宽，高速公路和一级公路选高次抛物线加宽，至于几次你就自己决定吧。还有些高速公路、一级公路、二级公路的一些特殊路段，是用回旋线加宽。</p>
+<p>到这里，超高和加宽的数据怎么查询规范，就已经做好了。</p>
+<p>现在继续纬地的下一步：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130173747237.png" alt="image-20201130173747237"></p>
+<p>点击自动计算超高加宽：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130173805452.png" alt="image-20201130173805452"></p>
+<p>这里都没有红色数据报错。</p>
+<p>如果有某一行报错了，那么大多就是选线的时候出问题了，你设计的路线不合理，需要重新调整，比如说你的园曲线半径和缓和曲线的数值，不满足规范的要求，这种情况较多见，你就需要重新回去选线了。</p>
+<p>如果你选线的时候，特别是设计园曲线的半径、缓和曲线的时候，都是满足规范的，然后做设计向导，也都是按规范填入的，那么到这一步基本上是不会报错的。</p>
+<p>点击下一步：</p>
+<p><img src="https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130174122637.png" alt="image-20201130174122637"></p>
+<p>就会生成4个文件，就是你刚才填入的那些数据，软件自动计算完了，然后保存到文件里面。点击完成即可。</p>
+<blockquote>
+<p>如果点击完成之后，软件出现致命错误，那就重新做一遍就好。重新不行就重启电脑，再重新开始，这没什么，只有第一次查询规范的时候才需要话费很大的力气，之后的基本上就没有什么了，都是软件常规操作而已。</p>
+<p>出现问题，多重做几遍，看看是不是哪一步出问题了，步骤没错就是软件的问题。</p>
+</blockquote>
+<p>好，做了这么久，我们也该休息一下了，这时候，关闭软件之前，点击保存一下项目就可以，然后就可以退出了。</p>
+<p>如果你点击保存项目之后，随便点了鼠标，你退出的时候还会弹出项目已修改，是否保存，你点击是也可以，否也可以；因为刚才的改变是因你滚动了鼠标，你只要确保做完设计之后，第一时间保存项目，而且后面没有做关于设计的任何操作，那么都可以忽视这些提示。</p>
+
+</body>
+</html>
