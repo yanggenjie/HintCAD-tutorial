@@ -1747,6 +1747,8 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 ### 批量打印
 
+> 批量打印看完之后，去看如何配置doroPDF虚拟打印机，会让你出图更快。
+
 点击扩展-批量打印：
 
 ![image-20201204152045817](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152045817.png)
@@ -1871,11 +1873,200 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 打印成PDF也是用批量打印。
 
-## PDF虚拟打印机
+## doro PDF虚拟打印机
 
 一般电脑上都会有默认的PDF打印机，不过那个打印机无法自动命名，相信大家已经体会到了，虽然省去了一些步骤，可依然繁琐，所以我们可以安装一个可以自动命名的打印机
 
+[DoroPDFWriter_2.10](https://www.lanzoui.com/iK3osj1r08f)，
+
+这个下载安装之后，重启CAD，在打印的时候，选择这个打印机即可。
+
+### 配置Doro PDF打印机
+
+打开Doro PDF虚拟打印机的安装配置，如果你是默认安装，一直点击下一步，那么安装目录就是：`C:\Program Files (x86)\DoroPDFWriter`
+
+用记事本打开`Doro.ini`
+
+![image-20201204182202484](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204182202484.png)
+
+然后是以下代码：
+
+前面的`'`是注释，如果你想要代码运行，那么就把前面的`'`去掉。
+
+下面的代码可以直接复制粘贴到`Doro.ini`文件，把原来的数据覆盖掉。
+
+但你必须把路径Path修改成你电脑已有文件夹的路径，否则它不会自动创建文件夹。文件夹路径只能有英文字母、数字组成，如果带有中文，会打印不成功。
+
+常用的地方我打上了中文注释，其它没有注释的基本都不需要设置的。大家可以自己尝试看看能不能看懂，代码比较简单。
+
+```visual basic
+'
+' remove the ' sign in front of the options to enable them
+'
+' these options can also be set in the registry at HKCU\Software\CompSoft\Doro\Ini
+'
+
+[Values]
+' {save} - use last title instead of document name
+Title=
+' 这里的题目是PDF文件的签名，不是文件标题，所以可以填写为空
+
+' {save} - use last title instead of document name
+Subject=
+' 这里的题目是PDF文件的签名，不是文件标题，所以可以填写为空
+
+' {save} - use last title instead of document name
+Keywords=
+' 这里的题目是PDF文件的签名，不是文件标题，所以可以填写为空
+
+Author=
+' 这里的题目是PDF文件的签名，不是文件标题，所以可以填写为空
+
+Producer=
+' 这里的题目是PDF文件的签名，不是文件标题，所以可以填写为空
+
+Path=D:\WorkSpace\1
+' 这里是修改默认的路径：把等号后面的路径修改到你要默认出图的地方，注意路径不能带有中文，只能是英文或者数字，
+
+' File=output
+
+' file name template
+' *FILE* will be replaced with the document name
+' use special characters to add date/time values
+' http://msdn.microsoft.com/en-us/library/windows/desktop/dd317787(v=vs.85).aspx
+' http://msdn.microsoft.com/en-us/library/windows/desktop/dd318148(v=vs.85).aspx
+
+FileTemplate=yyyy-MM-dd hh_mm_ss
+' 这里是输出文件的名字，上面的代码是自动根据系统时间来命名。
+
+'LaunchViewer=1
+
+' ShellExecute command
+' or
+' 'sendmail email_address "subject" "Hello!\nPlease see attached *FILE_NAME*\nSincerely..."' to send as attachment
+' or
+' '@application *PATH* *FILE* *FILE_NAME*' to execute an external application
+' Commands can be combined: open;@application...;sendmail...
+'LaunchCommand=print
+
+' 1 - automatically start conversion
+AutoStart=1
+' 自动开始打印，不会弹出询问的窗口
+
+' 0 - ask if file exist
+' 1 - always overwrite
+' 2 - rename new files adding 1, 2, 3...
+' 3 - merge with / append to existing file
+Overwrite=2
+' 这里是当发现有相同名字的文件时，该如何处理，我选择了2，自动重新命名。因为自动开始打印的速度太快，同一秒内可以同时打印很多文件，而文件的自动命名是根据时间来命名的，所以可能会有冲突，但文件内容是不相同的，所以需要自动重新命名。
+
+' use 72 for better picture compression
+ColorImageResolution=300
+GrayImageResolution=300
+MonoImageResolution=300
+' 这个是PDF的画质，我只是去掉前面的注释符号，其它数字没变。
+
+' 3 - set pdf version to 1.3
+' 4 - set pdf version to 1.4
+' 5 - set pdf version to 1.5
+Version=3
+' 这个版本其实我也不知道不同版本有什么区别，默认是1.3
+
+' 0 - normal user interface
+' 1 - smaller user interface
+' 2 - normal user interface without settings tab and with disabled autoupdate function
+' 3 - no user interface, AutoStart will be set to 1 automatically
+ReducedUI=3
+
+' 0 - General
+' 1 - Encryption
+' 2 - Settings
+'SelectedTab=0
+
+' 0 - 'Use 128-bit encryption' will always be unchecked
+' 1 - remember 'Use 128-bit encryption' checkbox state
+'RememberEncryptionSettings=1
+
+' 0 - don't use encryption
+' 1 - use encryption
+' 2 - create 2 files, one encrypted, one non-encrypted
+' 3 - create 2 files, one encrypted with user password, one encrypted without user password
+'UseEncryption=1
+'AllowCopyPaste=1
+'AllowPrint=1
+
+' password used for encryption
+'UserPassword=super secure
+'MasterPassword=much more secure
+
+' pdf/png/jpg/tif
+OutputFormat=pdf
+' 默认打印成PDF格式的
+
+' 1 - don't show message box on error
+'Silent=1
+
+' 1 - remove 'No Re-Distill' print protection
+'RemovePrintProtection=1
+
+' additional flags of user access permissions for encrypted pdf files
+' see http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf Page 123 Table 'User access permissions'
+'UserAccessPermissions=1024
+
+' 1 - create 'Fast Web View' pdf format
+'UseFastWebView=1
+
+' SinglePage, OneColumn, TwoColumnLeft, TwoColumnRight, TwoPageLeft, TwoPageRight - specify how the pages should be shown on opening the pdf file
+'PageLayout=SinglePage
+
+' UseOutlines, UseThumbs, UseOC, FullScreen, UseAttachments - specify which additional view should be shown on opening the pdf file
+'PageMode=UseThumbs
+
+' specify which page should be shown on opening the pdf file
+'Page=2
+
+' Fit, FitH, FitV, FitB, FitBH, FitBV - specify how the pages should be zoomed on opening the pdf file
+'View=FitV
+
+' Should the rotation of pages automatically be detected?
+' PageByPage, All or None
+'PageRotation=PageByPage
+
+' How to convert colors into PDF color space
+' UseDeviceIndependentColor, LeaveColorUnchanged, RGB, CMYK and Gray are possible
+'ColorConversionStrategy=UseDeviceIndependentColor
+
+' 0 - disable automatic check for new Doro version
+' 1 - enable automatic check for new Doro version
+AutoUpdate=0
+' 禁止自动更新
+
+' Specify additional ghostscript parameters
+'AdditionalParameters=
+
+```
+
+
+
+然后，现在重新使用批量打印，就不会出现每次都要重新命名的情况了。会自动帮你生成文件。
+
+
+
 # 结语
+
+第一版的写作完成了，刚好用了一整周。第一版有很多地方并不完整、不够全面是真的，平面的选线我两个原则带过、纵断面的拉坡我根本没讲规范、横断面也没怎么讲，然后桥梁、涵洞、挡土墙......太多太多东西需要讲了，这些东西若是没有足够丰富的经验，我写出来就是误人子弟，但这些知识，都是有专家已经写好了厚厚的一堆书，大家需要自己去图书馆查阅、去查找论文文献。
+
+感谢各位同学的陪伴，虽然我不知道你们是谁，但是确确实实有一群人看了教程之后，学会了如何完成课程设计、毕业设计或者是入门纬地软件，这一点我感觉很幸运，幸运我居然也能以己之力给一群人作出一点微薄的贡献。
+
+ 我觉得时代不管怎么变，文字依然是知识传播最有效率的方式，视频尽管生动形象，但也弱化了我们的想象力，思考能力，而且制作视频的成本比文字高太多了，制作成之后却无法有效率地检索复习，而且很多时候就是有些语气，听起来很做作，就是有人不喜欢听这个声音。而文字不一样，我们看文字的时候，脑海里的声音是自己的。
+
+当然，不是说视频一无是处皆是累赘，好的教学视频可以让人更容易地入门、激发学习兴趣，视频弹幕可以营造欢快的学习氛围，这又是文字所不能及的了。
+
+所以，在已经有教学视频的情况下，我依然出文字版，是为了那些需要深入研究学习的同学，让他们能够随时随地去研究任意一个话题。
+
+我这本小“书”同时也发在微信公众号“互联网螃蟹化石”上，有些篇幅设置的是收费，有些是公开免费。收费的地方并不就是做的很好，免费的地方不见得很差。终归都是这本书的内容。
+
+如果这本书对你有用，可以到微信公众号“互联网螃蟹化石”的付费文章购买，支持一下博主。当然不付费也依然可以免费看完这本书，毕竟你也付出了时间来阅读，如果我写的东西没有用，又有谁愿意看呢，所以不管哪种，只要能从文章中获得灵感、知识，都是对我的支持。要是万一很不幸，你感觉书中的这些内容都太肤浅，没什么用，我对此只能表示遗憾，你需要自己去查看更加深层的知识了。
 
 
 
