@@ -1,4 +1,5 @@
 ---
+
 typora-root-url: images
 ---
 
@@ -20,7 +21,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 写这个，也看看有多少人习惯看文字版，然后再考虑要不要出第二版，感觉不需要。除非大家也参与进来和我一起写作，不然我这点脑子不够用。我稍后会把这本“书”发布到github、gitee等仓库上，让大家也可以参与进来写作。也就是说，你现在看到的前言，可能不是最终的前言。我会尽量完善，删除过多的废话，留下一点就好。
 
-# 第一章 设计总流程
+# 设计总流程
 
 我的讲解习惯是**先讲整个完整流程的步骤，然后我再详细讲讲每个步骤**的详细过程，这样你在听课的时候有个方向，哦这里讲的是纵断面设计，那么之前应该是做数模，唉？数模是什么？喔，原来是这一步漏掉了，我回去翻翻......
 
@@ -64,7 +65,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 >
 > **所有的操作都是基于项目来操作的，所有的数据都是基于项目文件之上的。**
 
-### 纬地操作步骤
+## 纬地操作步骤
 
 点击项目-新建项目
 
@@ -96,13 +97,13 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 这个就是新建项目的整个过程了。
 
-### 注意事项
+## 注意事项
 
 > 关于项目，需要注意一点就是，当你想退出软件的时候，必须**点击保存项目**，不然你之前的设计就都白费了。
 
 # 2.打开地形图
 
-### 2.1纬地操作步骤
+## 2.1纬地操作步骤
 
 这一点，比较简单。
 
@@ -130,7 +131,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 我们可以看到这个命令栏上的提示：已经用国标字体替换了AAA字体。
 
-### 2.2注意事项
+## 2.2注意事项
 
 有些同学不断修改设计久了，会头脑混乱，**觉得直接双击打开地形图，直接做设计不行吗？**不行，还记得总步骤吗？
 
@@ -140,7 +141,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 # 3. 平面选线
 
-### 3.1 纬地操作步骤
+## 3.1 选交点
 
 * **点击设计，主线平面设计**
 
@@ -244,9 +245,9 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 
 
-### 3.2平曲线参数设置
+## 3.2平曲线参数设置
 
-#### 选线思路
+### 选线思路
 
 如果你看懂了上面的操作流程，那么恭喜你，至少已经进步了很多了。
 
@@ -282,7 +283,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 那具体要怎么符合规范呢？一条路可以由直线部分、曲线部分、缓和曲线部分构成，那么规范就是要规定在不同等级、不同情况的条件之下，直线的最小长度、最大长度应该是多少；园曲线最小半径应该是多少，缓和曲线的最小长度应该是多少。
 
-#### 直线的要求
+### 直线的要求
 
 我们现在来翻翻这本《公路路线设计规范》JTG D20-2017——第七章 公路平面
 
@@ -294,7 +295,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 >
 > 然后，第二条，这段直线也不能太短，不然开车的人刹不住车，容易引发车祸，翻车现场就是因为把油门当成刹车，一脚踩到底，路走窄了，最终不省人事。
 
-#### 园曲线最小半径
+### 园曲线最小半径
 
 **对园曲线的要求：**
 
@@ -314,7 +315,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 关于园曲线最小半径，如果超过一定值，则园曲线可不设置超高，如下`表7.4.1不设超高的园曲线最小半径`所示，这一点，我们到后面讲关于超高加宽设置的时候再讲。
 
-#### 缓和曲线长度
+### 缓和曲线长度
 
 **然后是缓和曲线的要求：**
 
@@ -360,7 +361,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 `话说回来，这一张好不容易有图片，结果图片里面还是文字，希望你们能静下心看。只要能看的书都看，多看几本。`
 
-### 3.3 平面图例识别
+## 3.3 平面图例识别
 
 其实选线原则这东西，一说谁都会，考虑的思路也比较明确，问题就是我不认识地形图上它标的到底是什么东西，说实话，不是我想挖这个房子，而是我根本不知道它是个房子！！所以，我觉得这个才是我能够帮助你的，现在开始识图模式。
 
@@ -428,7 +429,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 我们认识了哪些常见的图例：房屋、道路、庄稼/农田、河流。其它的，比如电线杆什么的，大家多看看图层的名字。
 
-### 3.4平面相关文件解读
+## 3.4平面相关文件解读
 
 **1.为什么要保存项目呢？**
 
@@ -486,7 +487,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 ## 4.1纬地操作步骤
 
-#### 衔接上一步操作
+### 衔接上一步操作
 
 接上一章的纬地操作，我假设你是一路看着过来的，也就是说，中间你可能关闭过电脑，那么现在重启打开电脑，我们要如何继续上一次的工作呢？
 
@@ -504,7 +505,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 但现在CAD窗口还是空空如也，什么都没有，地形图也没有打开。不过我们已经不需要打开地形图了，只有做平面选线的时候才需要打开地形图，或者是你自己想熟悉一下地形图，你可以打开。现在做设计向导，就无需打开。
 
-#### 路线参数设置
+### 路线参数设置
 
 然后现在开始做设计向导，设计向导这部分主要就是填入数据，所以这部分内容主要就是查询规范，下面的内容展示查询规范的过程。
 
@@ -528,13 +529,13 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 
 
-#### 项目分段设置
+### 项目分段设置
 
 ![image-20201127185024171](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127185024171.png)
 
 这里需要选择你自己设计的公路等级和设计车速。
 
-#### 路幅及断面形式设置
+### 路幅及断面形式设置
 
 ![image-20201127195431653](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201127195431653.png)
 
@@ -627,7 +628,7 @@ readme文件就是本书的正文，另外一个文件是草稿，在本地上�
 
 你看，目录上都写得清清楚楚，车道怎么设计出来的，中间带要不要设置，路肩要不要设置，宽度应该是多少才合理，路供横坡应该是多少。
 
-#### 填方边坡设置
+### 填方边坡设置
 
 - **补充知识**
 
@@ -713,7 +714,7 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 ![image-20201130112933766](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130112933766.png)
 
-#### 挖方边坡设置
+### 挖方边坡设置
 
 接下来是挖方边坡：
 
@@ -729,7 +730,7 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 ![image-20201130121504713](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201130121504713.png)
 
-#### 边沟和排水沟设置
+### 边沟和排水沟设置
 
 关于边沟，二级公路排水量相对少，所以一般都是设置矩形边沟，然后是40x40cm的，如果是一级公路以上或者是该地降雨量较多，排水需求大的，才是60x60的矩形边沟，或者梯形。干旱的地方就30x30cm。
 
@@ -743,7 +744,7 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 内侧边坡(靠近道路一侧，如图上的P2)一般为1:1~1:1.5之间，外侧边坡(靠近山体一侧，如上图的P1)通常和挖方边坡的坡率一致。
 
-#### 曲线超高设置
+### 曲线超高设置
 
 点击下一步，到超高加宽设置：
 
@@ -853,7 +854,7 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 土路肩一般选择不超高，而硬路肩超高一般和行车道一致。
 
-#### 曲线加宽设置
+### 曲线加宽设置
 
 园曲线的加宽应该根据公路的交通组成确定。
 
@@ -913,15 +914,11 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 这一节包括建立数模和数模应用。
 
-#### 衔接上一步操作
+### 衔接上一步操作
 
 现在如果关电脑过，就重新点击打开项目，然后找到之前保存的项目文件，打开就可以。如果你是一路看下来的，那么就什么都不用做，直接接着下面要说的步骤进行即可。
 
-
-
-#### 纬地操作步骤
-
-- **三维数据读入**
+### 三维数据读入
 
 点击数模，三维数据读入：
 
@@ -957,7 +954,7 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 >  这里可能会有些同学会显示读入0个数据，即读入0个点，0个约束段。这种情况是因为你的地形图没有高程值，你可以随便选中一条等高线或者地形点，然后右键——特性，看看有没有Z值，不能读入数据的，Z值都是0的。所有解决方案就是你需要自己手动输入Z值进去，或者换一个地形图。
 
-- **三角构网**
+### 三角构网
 
 读入数据之后，点击数模-三角构网
 
@@ -979,7 +976,25 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 > 双击轮滚的作用是：把当前文件的所有的东西都缩放到当前的窗口；能达到这个效果的操作还有：在命令栏输入命令Z,回车，输入A，回车。也可以同样达到一样的效果。
 
-- **数模应用**
+### 数模优化
+
+如果你的地形模型，高程值比较少，生成的模型比较粗糙，那么可以使用数模优化，进行微小地加密。
+
+如果你的地形高程值比较密，可以不用做数模优化，做数模优化的话就会更加接近真实地形。
+
+点击数模-三角网优化：
+
+![image-20201204134746715](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204134746715.png)
+
+弹出窗口，点击开始优化：
+
+![image-20201204134709672](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204134709672.png)
+
+然后你的地形模型就会变得更加平滑，做纵断面设计时，地面线也会相对接近真实地形。
+
+
+
+### 数模应用
 
 我们建立出来了带有数据的地形模型，是为了拿来用的，这些数据可以为之后的纵断面、横断面提供数据，比如说纵断面我们要进行拉坡，就需要有一个地面线，那个地面线就是从这个地形模型读入的。
 
@@ -1063,8 +1078,6 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 建立数模这一步，是纯粹的软件操作，所以内容不多。
 
-
-
 然后，如果我们现在要继续往下操作，就必须把窗口上的这个地形模型删除了：
 
 ![image-20201201182805428](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201201182805428.png)
@@ -1073,19 +1086,809 @@ W1是边坡平台，W2是护坡道。边坡平台都知道，设置边坡平台�
 
 # 6. 做纵断面设计
 
+### 衔接上一步操作
 
+上一步如果你关闭软件，重新打开，仍然是点击项目-打开项目。然后就可以进行接下来的操作 了。
+
+如果你直接做，记得**要删除地形模型**，或者**新建一个窗口**，才能进行接下来的操作。
+
+点击设计-纵断面设计
+
+![image-20201203104219530](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203104219530.png)
+
+
+
+然后点击计算显示，就会出现右侧的纵断面地面线图。
+
+![image-20201203104314318](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203104314318.png)
+
+> 注意
+>
+> 这里很多同学显示不出来，是因为做完数模之后，这个窗口里面还有地形模型，然后多个图在同一个窗口，导致显示不出来，所以把地形模型删除，或者新建窗口进行操作。
+
+### 变坡点
+
+然后点击选点：
+
+![image-20201203104732498](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203104732498.png)
+
+选择纵断面地面线的起点：
+
+![image-20201203104838842](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203104838842.png)
+
+然后重新弹回窗口，点击插入：
+
+![image-20201203104925902](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203104925902.png)
+
+这时候就可以进行拉坡操作了。
+
+拉到终点的时候，可能会自动捕捉到终点前面的一点：
+
+![image-20201203105110489](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203105110489.png)
+
+怎么也捕捉不到终点，这时候你先回车确定拉坡完成。然后重新弹出纵断面设计的窗口：
+
+
+
+![image-20201203105358954](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203105358954.png)
+
+点击到最后一个变坡点，然后手动修改桩号为终点桩号，如果纵断面上的图看不清，可以点击纬地项目中心看看终点桩号：
+
+点击项目-纬地项目中心：
+
+![image-20201203105642238](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203105642238.png)
+
+点击桩号序列：
+
+![image-20201203105801987](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203105801987.png)
+
+然后把终点桩号复制过去，这里终点桩号是1812.813，所以最后一个变坡点填入1812.813：
+
+![image-20201203105925698](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203105925698.png)
+
+
+
+### 竖曲线半径
+
+变坡点选取完成之后，接下来就要填入竖曲线半径：
+
+![image-20201203110452622](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203110452622.png)
+
+
+
+这个就需要大家查询《公路路线设计规范》了。
+
+填入半径之后，点击计算：
+
+![image-20201203110744382](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203110744382.png)
+
+
+
+然后点击计算显示：
+
+![image-20201203111510354](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203111510354.png)
+
+这时候在纵断面图上已标出竖曲线的位置，就说明纵断面设计完成了。
+
+
+
+### 保存纵断面设计文件
+
+接下来需要保存纵断面设计的数据，重新点击设计-纵断面设计，存盘：
+
+![image-20201203110841598](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203110841598.png)
+
+弹出窗口，选择保存的位置：
+
+![image-20201203110942016](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203110942016.png)
+
+点击保存，然后再存盘一次，提示保存完毕即可：
+
+![image-20201203111009925](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203111009925.png)
+
+### 保存沟底标高文件
+
+点击`存沟底标高`：
+
+![image-20201203111149333](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203111149333.png)
+
+弹出窗口，选择左沟底标高，保存：
+
+![image-20201203111305263](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203111305263.png)
+
+再次点击存沟底标高。选择右沟底标高，保存：
+
+![image-20201203111402704](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203111402704.png)
+
+
+
+最后保存项目。
 
 # 7 路基设计计算
 
+### 衔接上一步操作
 
+上一步如果你关闭软件，重新打开，仍然是点击项目-打开项目。然后就可以进行接下来的操作 了。
+
+### 路基设计计算
+
+点击设计，路基设计计算
+
+![image-20201203111631613](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203111631613.png)
+
+弹出窗口，点击搜索全线：
+
+![image-20201203111843173](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203111843173.png)
+
+
+
+然后弹出搜索结果提示，注意看平面设纵断面的起点、终点桩号是否一致，如果不一致，以平面的为主，去调整纵断面的桩号。
+
+确保计算桩号区间都有之后，点击路基设计中间文件旁边的三个点，选择保存位置：
+
+![image-20201203112050509](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203112050509.png)
+
+点击之后弹出保存提示：
+
+![image-20201203112117671](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203112117671.png)
+
+点击保存即可。
+
+确保计算桩号区间和路基设计中间文件都有值之后，点击计算：
+
+![image-20201203112210580](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203112210580.png)
+
+然后看到命令栏提示：
+
+![image-20201203112230924](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203112230924.png)
+
+所有桩号计算完成。
+
+这时候保存一下项目，因为我们刚才保存了新的文件，所以项目文件就多了个索引，需要保存。
 
 # 8.横断面设计
+
+其实做完路基设计计算，横断面已经出来了，不过有些需要更加详细的设计，比如挖台阶处理之类的，就需要手动设计。
+
+如果不需要更详细的设计，直接点击设计-横断面设计绘图，查看横断面图即可。
+
+![image-20201204132044795](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204132044795.png)
+
+- 设计控制
+
+勾选自动延伸地面线不足、扣除桥隧断面
+
+![image-20201204132117762](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204132117762.png)
+
+
+
+- 土方控制
+
+勾选土方数据文件。点击旁边的三个点，选一个地方保存下来。
+
+![image-20201204132244155](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204132244155.png)
+
+
+
+- 绘图控制
+
+标准比例要选择1:200，然后每幅列数那里一般选1-2列，正规是1列，如果图较多，可以设置2列。
+
+勾选自动剪断地面线宽度，否则你会发现地面线延伸到图框外了。
+
+另外一边的标注，一般勾选控制标高和地面线高程，其它看要求来。
+
+标注型式，低等级公路(二级以下)选择标注数据即可，其它可以选表格标注。
+
+![image-20201204132423003](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204132423003.png)
+
+
+
+- 绘图范围
+
+可以自己定义出图的范围，没有特殊要求就输出全线图。
+
+然后点击设计绘图，看命令栏操作即可。
+
+![image-20201204132754499](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204132754499.png)
+
+
+
+
+
+接下来这个是需要手动调整的步骤。
+
+### 绘制标准横断面
+
+> 这里的绘制标准横断面不是放到计算书上的标准横断面，这里绘制标准横断面是为了生成全线的横断面图。
+
+点击设计-横断面设计：
+
+![image-20201203112741342](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203112741342.png)
+
+弹出横断面设计工作空间：
+
+![image-20201203112847713](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203112847713.png)
+
+
+
+点击第一个，自动生成标准横断面：
+
+![image-20201203112931502](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203112931502.png)
+
+> 这里自动生成是根据之前设计向导填入的数据生成。
+
+然后双击鼠标轮滚：
+
+![image-20201203113044453](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203113044453.png)
+
+就可以看到这个标准横断面，默认是填方段的。我们可以看到旁边的标准横断面多了一个桩号，这就是说这个标准横断面是以这个桩号为基础生成的。我们我可以看看标准横断面的数据是否有误，然后可以进行修改。
+
+如果没有什么错误，就开始横断面戴帽
+
+如要修改，点击数据-控制参数输入-标准断面：
+
+![image-20201204131859675](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204131859675.png)
+
+进行修改。
+
+
+
+### 横断面戴帽
+
+点击旁边的横断面戴帽：
+
+![image-20201203113340140](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203113340140.png)
+
+然后弹出桩号范围填写：
+
+![image-20201203113407491](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203113407491.png)
+
+点击确定：
+
+这时候我们就可以看到横断面生成了许多桩号：
+
+![image-20201203113516636](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203113516636.png)
+
+可以点击各个桩号逐一查看：
+
+一般都没啥大问题，除非是要求对每个段进行单独的详细设计，否则由纬地自动生成的就可以直接使用了。在横断面设计这一步，能详细做的就是挖台阶处理，但那样太详细的设计，一两个月只靠一个人是完成不了的。
+
+
+
+如果你要回复正常的工作空间，关闭横断面设计的窗口即可：
+
+![image-20201203114319607](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201203114319607.png)
+
+
+
+
 
 
 
 # 9. 其它构造物的设计
 
+关于其它构造物的设计，知识有限，无法详细说明，所以大家可以自行研究一下。
+
+## 桥梁设计
 
 
 
+> 这里的桥梁设计只能标注桥梁位置，无法设计桥梁细部构造。
 
+虽然说路桥不分家，不过对于个人来说，这个路桥两部分的知识有点庞大，除非在路桥工作有些年限，否则仅凭书本这点内容，是没法掌握那么多的，笔者是道路与桥梁专业主修道路，故而桥梁部分的内容谈不上教学，只能给大家讲软件操作，输入填入的方法，至于设计桥梁，需要大家自己去查阅资料了。
+
+下面是软件的操作：
+
+点击数据-控制参数输入
+
+![image-20201204114409446](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204114409446.png)
+
+
+
+弹出窗口，选择桥梁：
+
+![image-20201204114638059](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204114638059.png)
+
+
+
+点击插入：
+
+![image-20201204114710486](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204114710486.png)
+
+选中刚才新建的桥梁，输入起始桩号和各部分的桥梁名称：
+
+![image-20201204114822627](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204114822627.png)
+
+这里填写桥梁设计的位置，一般过河、农田、即其它地质不稳定的地方，都可以设计桥梁。
+
+- 桥梁桩号
+
+这里桥位的选择与地形图有关，而且这里也只是标注位置，就不一一详说。
+
+- 桥梁名称
+
+名称随便写一个，比如可以按功能、结构等来命名，比如从XX到XX桥、预应力混凝土xxx桥
+
+- 跨径分布
+
+“2*25m”形式填入
+
+前面的数字2表示跨数，即2跨
+
+25m代表单独一跨的长度，即每一跨有25m。这座桥总长50m。
+
+![image-20201204122321137](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204122321137.png)
+
+
+
+关于跨径的选择，请大家查询《公路桥涵设计通用规范》JTG D60-2015。
+
+- 结构型式
+
+板桥、梁桥、钢结构桥。
+
+填写完成之后，点击存盘
+
+![image-20201204123208411](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204123208411.png)
+
+
+
+## 涵洞设计
+
+同样在控制参数输入里进行，点击涵洞通道-插入：
+
+![image-20201204130854025](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204130854025.png)
+
+- 中心桩号
+
+填写涵洞的中心桩号
+
+- 角度
+
+默认正交，即90度。
+
+- 跨径说明
+
+盖板涵:1-2.5×4m
+
+1跨，盖板涵界面尺寸。
+
+圆管涵:1-Φ1.5m
+
+1跨，圆管涵界面半径。
+
+- 结构型式
+
+注释说明该跨径是哪种涵洞型式。下图来自《公路涵洞设计细则》JTGT D65-04-2007
+
+![image-20201204131552406](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204131552406.png)
+
+
+
+更多详细设计请自行查阅资料。
+
+## 挡土墙
+
+设计-支挡构造物处理
+
+![image-20201204133820836](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204133820836.png)
+
+
+
+弹出挡墙设计工具：
+
+![image-20201204134007545](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204134007545.png)
+
+分为标准挡墙和挡墙文件
+
+> 标准挡墙就是一个标准库，这里面都是画好的模型
+>
+> 挡墙文件是你设计的挡墙段。
+
+首先要从挡墙库中拖拽一个标准图下来
+
+> 从左侧挡墙库拖到左侧挡墙文件；
+>
+> 从右侧挡墙库拖到右侧挡墙文件。
+
+![image-20201204134312725](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204134312725.png)
+
+拖到挡墙文件之后，点击那个挡墙文件，设置起始桩号和相关的参数设置。
+
+![image-20201204134409953](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204134409953.png)
+
+具体的设计请自己查阅资料。
+
+# 10.出图、输出表格
+
+## 图框定制
+
+本书采用的方式是修改纬地原图框，不能自己直接画好然后导入，那样需要处理图框比例、打印视口、图框坐标对应；等问题，比较繁琐。
+
+> 修改图框需要注意的点
+>
+> 1.必须先备份纬地的图框文件，万一你修改错了，可以复制过来覆盖。
+>
+> 2.修改图框必须在打开纬地的前提下，不能直接双击打开图框，否则会因为版本不兼容等问题，导致图框修改失败。
+>
+> 3.这里只介绍修改平面图框的方法，其它的图框同理，核心点就是不要动纬地自带图框的外边框，因为这个图框的坐标是固定的，如果你修改了位置，那么出图的时候，就捕捉不到图框。只要保证最外的边框不动你可以在里面随意修改。
+>
+> 4.修改图框之后点击出图，不会影响你的设计，所以你大可一直重复试验，如果你实在修改不成功，可以向同学或者老师询问。
+
+接下来开始讲图框的修改。
+
+我们先看纬地默认使用的图框是哪些，点击项目-项目管理器：
+
+![image-20201204135421569](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204135421569.png)
+
+弹出窗口：
+
+![image-20201204135538696](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204135538696.png)
+
+- 修改平面图框
+
+打开安装目录下的模板-图框
+
+![image-20201204140419233](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204140419233.png)
+
+然后找到`平面图框.dwg`，这个就是我们要修改的图框。
+
+修改图框要在纬地打开的环境下修改，先打开纬地，然后点击打开文件（快捷键ctrl+o）
+
+![image-20201204140733586](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204140733586.png)
+
+找到图框点击打开：
+
+![image-20201204140813967](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204140813967.png)
+
+然后进入模型空间修改：
+
+![image-20201204140837232](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204140837232.png)
+
+除了最外框，不要删除，内框和外框之间的距离不要删除，其它完全可以删除了。然后修改成自己想要的图框
+
+![image-20201204140942079](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204140942079.png)
+
+比如你不需要这个侧栏：
+
+![image-20201204141108580](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204141108580.png)
+
+选中直接删除，然后把边框往左移动：
+
+![image-20201204141214974](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204141214974.png)
+
+移动之后，有些线条粗细不一致，你就自己调整以下，然后自己补充延伸。
+
+然后底下的标题栏你可以全部删除，自己设计。可以直接打上你的信息，直接固定住，不需要动态修改。
+
+![image-20201204141320279](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204141320279.png)
+
+如果你需要动态修改，那么在动态修改的地方插入纬地标签，点击模板-自动生成标签：
+
+![image-20201204141445270](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204141445270.png)
+
+点击一个空白的地方，然后就会有一堆标签，哪里需要后期动态修改，你就把那个标签**复制**过去。
+
+![image-20201204141509099](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204141509099.png)
+
+这些标签和纬地项目管理-属性里面的一一对应，如果你复制这个标签过去，那么你只需要在属性里面修改，出图的时候就会自动填写了。
+
+![image-20201204141638490](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204141638490.png)
+
+
+
+如果你是自己打字上去，那么出图的时候是没办法修改的，需要重新回来修改图框。
+
+## 平面出图
+
+平面出图之前需要打开地形图。
+
+![image-20201204144843636](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204144843636.png)
+
+然后点击设计-主线平面设计-计算显示：
+
+![image-20201204144918821](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204144918821.png)
+
+路线显示出来之后，点击绘图-平面自动分图：
+
+![image-20201204145027204](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204145027204.png)
+
+弹出窗口，勾选插入元素表-带交点坐标和要素坐标：
+
+![image-20201204145102092](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204145102092.png)
+
+点击开始出图：
+
+然后就会自动分图，自动转到布局空间：
+
+![image-20201204145237835](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204145237835.png)
+
+然后你要打印成PDF：
+
+鼠标移动到平面布局，右键-打印：
+
+![image-20201204145348094](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204145348094.png)
+
+弹出打印设置界面：
+
+![image-20201204145433988](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204145433988.png)
+
+
+
+先点击右下角的箭头，展开详细的界面：
+
+![image-20201204145503898](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204145503898.png)
+
+然后设置打印机，选一个可以打印成PDF的打印机：
+
+![image-20201204145729532](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204145729532.png)
+
+然后纸张大小选A3，一般都是用A3打印图纸、表格。
+
+然后勾选居中打印、布满图纸；选择窗口打印，选择窗口范围。
+
+### 样式打印
+
+然后我们看到旁边的样式打印表：
+
+![image-20201204150043420](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150043420.png)
+
+![image-20201204150057089](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150057089.png)
+
+点击下拉框，新建一个样式：
+
+![image-20201204150133459](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150133459.png)
+
+创建新打印样式表，点击下一步：
+
+![image-20201204150202408](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150202408.png)
+
+文件名写成黑白打印（名字随意，只不过我们的目的是黑白打印，所以叫黑白打印比较直接）：
+
+![image-20201204150259356](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150259356.png)
+
+点击打印样式表编辑器：
+
+![image-20201204150403544](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150403544.png)
+
+先选中左边栏的所有颜色，然后点击右边的特性-颜色-选黑色
+
+> 左边栏代表的是原来图纸的颜色，右边的特性是指最终要打印成什么样子。
+>
+> 我们不知道图纸究竟有哪些颜色，所以就索性把所有颜色都勾选，然后都让它打成黑色
+
+![image-20201204150642715](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150642715.png)
+
+设置完成之后，点击保存并关闭。
+
+![image-20201204150708059](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150708059.png)
+
+然后勾选对当前图形使用此打印样式表，点击完成。
+
+![image-20201204150754716](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150754716.png)
+
+
+
+这时候打印样式表就是黑白打印了，之后的每次打印，只要选择黑白打印就可以了，不用继续设置。
+
+我们再点击应用到布局：
+
+![image-20201204150902891](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150902891.png)
+
+
+
+这样，接下来的平面图就不需要我们重新设置。
+
+然后点击确定，弹出窗口，找个地方保存PDF文件：
+
+![image-20201204150959274](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204150959274.png)
+
+点击保存：
+
+![image-20201204151017729](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151017729.png)
+
+
+
+然后就开始打印了。
+
+最终出图。
+
+![image-20201204151036868](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151036868.png)
+
+**样式打印可以使用于任何打印场景。**接下来的纵断面横断面打印都是使用样式打印表，接下来的章节就不详细讲样式打印。
+
+## 纵断面出图
+
+继续出纵断面图，由于是出图，可以不用新建新的窗口，直接在当前地形图打开的情况下出图，如果你的电脑出现问题，那么可以新建空白窗口重新出图。
+
+点击设计-纵断面绘图：
+
+![image-20201204151358982](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151358982.png)
+
+先取消所有的栏目：
+
+![image-20201204151435841](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151435841.png)
+
+然后按自己的要求来勾选：
+
+除了地质概括没有，其它可以都勾选。
+
+![image-20201204151549025](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151549025.png)
+
+勾选绘制网格。
+
+然后点击搜索全线：
+
+![image-20201204151621449](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151621449.png)
+
+保证平、纵、横设计的起终点桩号一致，然后点击确定：
+点击批量绘图：
+
+![image-20201204151717794](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151717794.png)
+
+命令栏提示输入起始页码，输入1回车
+
+![image-20201204151742681](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151742681.png)
+
+输入总页码，总页码和总页数相同，这里输入3回车：
+
+![image-20201204151822496](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151822496.png)
+
+
+
+然后点击一个空白的地方，就出图成功：
+
+![image-20201204151919651](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204151919651.png)
+
+
+
+最好打印成PDF，纵断面和横断面的图比较多，所以需要批量打印：
+
+### 批量打印
+
+点击扩展-批量打印：
+
+![image-20201204152045817](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152045817.png)
+
+看命令栏提示，选择第一幅的左下角：
+
+![image-20201204152135509](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152135509.png)
+
+
+
+然后选择右上角，再继续选第二幅的左下角：
+
+![image-20201204152249968](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152249968.png)
+
+
+
+弹出窗口，是否预览，可以预览，可以不预览。
+
+第一次点击都会弹出以下这个窗口（上面一步我选择预览）：
+
+![image-20201204152330689](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152330689.png)
+
+点击新建一个打印方式，弹出窗口命名一下设置名：
+
+![image-20201204152421696](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152421696.png)
+
+点击确定之后，弹出打印设置界面，和平面的打印设置一样：
+
+![image-20201204152542450](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152542450.png)
+
+> 这里就不需要选择打印范围了，你刚才已经选过
+>
+> 只需选择打印机、图纸尺寸、居中打印、布满图纸、样式打印表。
+
+然后点击确定。
+
+![image-20201204152717497](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152717497.png)
+
+重新弹出这个窗口，点击刚才你的打印设置，然后点击置为当前，然后看到当前页面设置是：我的打印设置。然后点击关闭。
+
+然后弹出预览窗口，如果没问题，点击左上角的关闭即可：
+
+![image-20201204152837291](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152837291.png)
+
+关闭之后，弹出预览结果是否正常，点击是
+
+![image-20201204152918880](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204152918880.png)
+
+
+
+这里会预览两次，都点击关闭就可以了。
+
+然后弹出保存窗口，命名-保存：
+
+![image-20201204153001363](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204153001363.png)
+
+会一直弹出窗口，让你保存和命名。这是因为刚才选择的打印机没有自动命名的功能，大家可以去下载PDF虚拟打印机，可以自动命名，这样就不需要每次都命名了。
+
+## 横断面出图
+
+横断面出图，在讲横断面设计的时候已经说过了，这里单独出图也讲一下。
+
+点击设计-横断面设计绘图：
+
+![image-20201204153217740](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204153217740.png)
+
+
+
+然后这里大家会发现之前设置过的东西可能被重置了：
+
+![image-20201204153414791](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204153414791.png)
+
+什么土方文件哪些都没有导入进来，这是因为你之前做横断面设计的时候，没有点击保存项目，如果你已经有的话，直接点击设计绘图，然后看着命令栏提示，先点击一个空白的地方，输入起始页码回车：
+
+>  注意，绘图方式是选择1:200，横向，如果你选纵向，可能会出图有问题。
+
+![image-20201204153639247](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204153639247.png)
+
+然后接下来打印成PDF文件，依然使用批量打印功能。
+
+## 输出表格
+
+所有表格都在**表格**这一栏输出。
+
+![image-20201204153824461](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204153824461.png)
+
+
+
+输出表格要求：office2007以上，对2007的兼容较好，不过到现在，更高级的版本也依然可以输出了。如果你没有微软的office,可以使用WPS，一定是可以成功的。
+
+- 关于路基设计表
+
+这个表格，如果用电子表格的软件输出不了，那么就在CAD上输出。
+
+点击表格-路基设计表：
+![image-20201204154224201](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204154224201.png)
+
+
+
+然后选择CAD图形(模型空间)
+
+![image-20201204154250319](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204154250319.png)
+
+点击计算输出：
+![image-20201204154317111](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204154317111.png)
+
+是否输出破口脚至中桩距离，点击是
+
+然后看到命令栏提示，输入起始页码，（终止页码就是总页数。）
+
+![image-20201204154414727](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204154414727.png)
+
+然后路基设计表就出来了。
+
+![image-20201204154512775](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204154512775.png)
+
+如果你无法缩放查看全部，请双击鼠标轮滚(或者输入命令Z，回车，A，回车)
+
+![image-20201204154627257](https://gitee.com/yanggenjie/HintCAD-tutorial/raw/master/images/image-20201204154627257.png)
+
+就可以看到所有表格了。
+
+打印成PDF也是用批量打印。
+
+## PDF虚拟打印机
+
+一般电脑上都会有默认的PDF打印机，不过那个打印机无法自动命名，相信大家已经体会到了，虽然省去了一些步骤，可依然繁琐，所以我们可以安装一个可以自动命名的打印机
+
+# 结语
+
+
+
+# 参考文献
+
+[1]许金良. 《道路勘测设计》毕业设计指导[M]. 人民交通出版社, 2004.
+
+[2]许金良.《道路勘测设计》第四版.
+
+[3]公路路线设计规范：JTGD20-2017/中交第一公路勘察设计研究院有限公司主编.一北京：人民交通出版社股份有限公司，2017.12
+
+[4]公路桥涵设计通用规范：JTGD60-2015/中交公路规划设计院有限公司主编.一北京：人民交通出版社股份有限公司，2015.10
+
+[5]公路路基设计规范：JTGD30-2015/中交第二公路勘察设计研究院有限公司主编.一北京：人民交通出版社股份有限公司，2015.4
+
+[6]公路工程技术标准：JTGB01-2014/交通运输部公路局，中交第一公路勘察设计研究院有限公司主编.一北京：人民交通出版社股份有限公司，2014.12
