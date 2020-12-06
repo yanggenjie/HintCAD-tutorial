@@ -18,8 +18,10 @@
 
 2.如果你找不到，可以点击下面的外链进行下载。
 
-PDF格式下载：[点击下载](https://www.lanzoui.com/i0PXuj26kvi)
+PDF格式下载：[点击下载](https://www.lanzoui.com/iKU45j443fa)
 
-epub格式下载：[点击下载](https://www.lanzoui.com/i4EF8j26kif)
+epub格式下载：[点击下载](https://www.lanzoui.com/iftvYj444cd)
 
-mobi格式下载：[点击下载](https://www.lanzoui.com/ilIoUj26ksf)
+mobi格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
+
+PDF格式的文件体积好像有点大，之前在Windows上转换的时候只有9M左右，现在居然大到44M。
