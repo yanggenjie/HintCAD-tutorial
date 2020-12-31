@@ -4,13 +4,13 @@
 
 这个《纬地一学即会》文字版第一版已更新完结，由于博主的知识有限，当然会有很多遗漏的地方，希望大家多多指正。欢迎大家PR
 
-本教程不提供任何软件安装包，仅用于技术交流，如有侵权，请联系博主，删除相关文章。
+本教程**不提供任何软件安装包**，仅用于技术交流，如有侵权，请联系博主，删除相关文章。
 
-联系邮箱：yang_genjie@126.com
+联系邮箱：[yang_genjie@126.com](yang_genjie@126.com)
 
 # 关于本书
 
-本书暂定完结；2020-12-06
+本书暂定完结，完结时间：2020-12-06。
 
 本书的下载方式：
 
@@ -23,4 +23,10 @@ PDF格式下载：[点击下载](https://wwi.lanzous.com/ihWbYjmx8vi)
 epub格式下载：[点击下载](https://www.lanzoui.com/iftvYj444cd)
 
 mobi格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
+
+
+
+# 最后
+
+大家可以关注一下我的个人博客，不过和纬地、土木没有关系啦。个人技术博客记录一些自己的学习过程：[yanggenjie.gitee.io/blog](https://yanggenjie.gitee.io/blog)。
 
