@@ -28,5 +28,5 @@ mobi格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
 
 # 最后
 
-大家可以关注一下我的个人博客，不过和纬地、土木没有关系啦。个人技术博客记录一些自己的学习过程：[yanggenjie.gitee.io/blog](https://yanggenjie.gitee.io/blog)。
+大家可以关注一下我的个人博客，不过和纬地、土木没有关系啦。个人技术博客记录一些自己的学习过程：[yanggenjie.com](yanggenjie.com)。
 
