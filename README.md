@@ -18,15 +18,15 @@
 
 2.如果你找不到，可以点击下面的外链进行下载。
 
-PDF格式下载：[点击下载](https://wwi.lanzous.com/ihWbYjmx8vi)
+PDF格式下载：[点击下载](https://wwi.lanzoui.com/ihWbYjmx8vi)
 
 epub格式下载：[点击下载](https://www.lanzoui.com/iftvYj444cd)
 
 mobi格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
 
-
+exe格式下载：[点击下载](https://wwi.lanzoui.com/iZYmPtyznyf)（exe格式使用[网文快捕](http://cn.wizbrother.com/)生成）
 
 # 最后
 
-大家可以关注一下我的个人博客，不过和纬地、土木没有关系啦。个人技术博客记录一些自己的学习过程：[yanggenjie.com](https://yanggenjie.com/)。
+个人技术博客网站：[yanggenjie.com](https://yanggenjie.com/)，主要还是在gitee上更新，这个网站后面可能不续费了。
 
