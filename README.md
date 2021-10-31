@@ -12,7 +12,7 @@
 
 本书暂定完结，完结时间：2020-12-06。
 
-在线阅读：[《纬地一学即会》](https://www.yuque.com/books/share/b3cc8b7f-6f12-4d5b-a02e-d5ba1a1cb8bb?# 《纬地一学即会》)
+在线阅读：[《纬地一学即会》](https://www.yuque.com/ryzeyang-k2z5n/pncozy/vo28g1hgr284)
 
 本书的下载方式：
 
