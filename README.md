@@ -30,5 +30,5 @@ mobi格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
 
 # 其它
 
-个人技术博客网站：[yanggenjie.com](https://yanggenjie.com/)，主要还是在gitee上更新。
+个人技术博客网站：[yanggenjie.com](https://yanggenjie.cn/)，主要还是在gitee上更新。
 
