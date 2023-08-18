@@ -20,15 +20,12 @@
 
 2.如果你找不到，可以点击下面的外链进行下载。
 
-PDF格式下载：[点击下载](https://wwi.lanzoui.com/ihWbYjmx8vi)
+PDF 格式下载：[点击下载](https://wwi.lanzoui.com/ihWbYjmx8vi)
 
-epub格式下载：[点击下载](https://www.lanzoui.com/iftvYj444cd)
+epub 格式下载：[点击下载](https://www.lanzoui.com/iftvYj444cd)
 
-mobi格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
-
-
+mobi 格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
 
 # 其它
 
-个人技术博客网站：[yanggenjie.cn](https://yanggenjie.cn/)，主要还是在gitee上更新。
-
+个人技术博客网站：[https://selfteachingroad.cn/](https://selfteachingroad.cn/)，主要还是在 gitee 上更新。
