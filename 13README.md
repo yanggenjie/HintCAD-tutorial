@@ -11,11 +11,7 @@
 
 # 关于本书
 
-本书暂定完结；2020-12-06
+- 2020-12-06本书暂定完结；
+- 2023-12-02更新在线阅读：[点击开始阅读](https://selfteachingroad.cn/sub/HintCAD/)
 
-本书的下载方式：
-
-- PDF格式下载：[点击下载](https://wwi.lanzous.com/ihWbYjmx8vi)
-- epub格式下载：[点击下载](https://www.lanzoui.com/iftvYj444cd)
-- mobi格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
-
+本书的离线下载方式：暂无
