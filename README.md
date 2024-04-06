@@ -13,9 +13,6 @@
 
 本书暂定完结；2020-12-06
 
-本书的下载方式：
-
-- PDF格式下载：[点击下载](https://wwi.lanzous.com/ihWbYjmx8vi)
-- epub格式下载：[点击下载](https://www.lanzoui.com/iftvYj444cd)
-- mobi格式下载：[点击下载](https://www.lanzoui.com/iwlFIj443xi)
-
+本书在线阅读：[点击阅读](https://selfteachingroad.cn/wiki/HintCAD)
+下载
+- 百度网盘:百度网盘：[https://pan.baidu.com/s/1leX2Y8DtNBtjDhk_SVUBaw?pwd=6666](https://pan.baidu.com/s/1leX2Y8DtNBtjDhk_SVUBaw?pwd=6666) 提取码：6666 )
